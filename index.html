@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator BMI</title>
+    <!-- feathericons -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CALCULATOR BMI - Nugraha Ramdani</h1>
+    </header>
+    <main>
+      <div class="main-container">
+        <!-- DISPLAY FORM -->
+        <div class="container-item">
+          <h2>Form BMI</h2>
+          <p>Tahukah kamu jika berat badan yang ideal adalah salah satu indikator sehat atau tidaknya tubuh kita. Dengan berat badan yang ideal, kita dapat menurunkan beberapa resiko penyakit yang diakibatkan oleh berat badan yang berlebih ataupun berat badan yang dibawah standar. Oleh sebab itu, tubuh yang ideal menjadi impian semua orang karna dapat berdampak pada psikologis seseorang juga. Karena begitu besarnya pengaruh berat badan dalam kehidupan kita, yuk ikuti <span>step
+             step by step</span> dibawah ini agar kita mengetahui ideal atau tidaknya berat badan kita.  </p>
+          <section class="container-form">
+            <div class="container-form-div">
+              <label for="">Nama</label>
+              <br>
+              <i data-feather="edit-3"></i><input class="form-item" type="text" placeholder="Nama Depan" id="nama-depan"><input class="form-item" type="text" placeholder="Nama Belakang" id="nama-belakang">
+              <br>
+              <br>
+              <label for="">Jenis Kelamin</label>
+              <br>
+              <input type="radio" name="sex" id="sex-man" />
+              <label for="sex-man">PRIA</label>
+              <input type="radio" name="sex" id="sex-woman" />
+              <label for="sex-woman">WANITA</label>
+              <br>
+            </div>
+            <div>
+              <br>
+              <label for="">Usia (Tahun)</label>
+              <br />
+              <i data-feather="edit-3"></i><input class="form-item" type="number"/>
+              <br>
+              <br>
+              <label for="weight">Berat Badan (Kg)</label>
+              <br>
+              <i data-feather="edit-3"></i><input class="form-item" type="number" id='weight'/>
+              <br>
+              <br>
+              <label for="height">Tinggi Badan (cm)</label>
+              <br />
+              <i data-feather="edit-3"></i><input class="form-item" type="number" id='height'/>
+              <br>
+              <br>
+            <div>
+              <br>
+              <button class="calculate-button" onclick='calculateBmi()' >Hitung BMI</button>
+              <button class="btn-reset" onclick="reload()" >Reset</button>
+              <br>
+              <br>
+              <h4>Keunggulan Fitur</h4>
+              <fieldset>
+                <legend>Keunggualn Fitur</legend>
+                  <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                    <li>Dapat berkonsultasi dengan Dokter terbaik</li>
+                    <li>Jadwal konsultasi yang <span>flexible</span></li>
+                  </ol>
+              </fieldset>
+              <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil dan menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat, seperti dokter</p>
+              <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda {dalam kilogram} dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI=kg/M<sup>2</sup>.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- DISPLAY RESULT -->
+        <div class="container-item">
+          <h2>Result</h2>
+            <section class="container-result">
+                <h4 id="heading">Berat Badan Lebih</h4>
+                <h1 id="result-bmi">0</h1>
+                <h4 id="message">Anda Memiliki Berat Badan Berlebih</h4>
+                <button class="download-result" type="button">Download Hasil BMI</button>
+            </section>
+            <section class="container-result-advice">
+                <p>Hasil BMI antara 23 dan 25</p>
+                <p>Anda berada dalam kategori <span>overweight</span> atau berat badan berlebih. <br> Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga. <br> Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk <b>menurunkan berat badan</b> hingga batas normal. </p>
+            </section>
+            <section class="konsultasi-button">
+                <p>Mau coba konsultasi ?</p>
+                <input type="date"> <p class="konsultasi-dengan">dengan</p> 
+                <select class="nama-dokter" name="nama-dokter" id="nama-dokter">
+                  <option value="">dr. Audrey Amelia Putri, M.Gizi, Sp.GK</option>
+                  <option value="">dr. Defanti Syaharani, MARS, MS, Sp.GK</option>
+                  <option value="">dr. Daffa Arkana, Sp.GK</option>
+                  <option value="">dr. Qaisar Khalif Lubis, Sp.GK</option>
+                  <option value="">dr. Qaidina Shafa Lubis, M.Gizi, SpGK</option>
+               </select>
+            </section>
+            <section class="container-result-advice">
+                <p>BMI tidak sepenuhnya mewakili diagnosa menyeluruh dari kesehatan tubuh anda dan resiko penyakit. Anda perlu konsultasikan lebih lanjut mengenai resiko yang akan terjadi teerkait penghitungan BMI yang telah anda lakukan.</p>
+            </section>
+            <section class="container-result-penyakit">
+                <h4>BEBERAPA PENYAKIT YANG BERASAL DARI KEGEMUKAN</h4>
+                  <a href="https://www.alodokter.com/diabetes">Diabetes</a>
+                  <br>
+                  <a href="https://www.halodoc.com/kesehatan/hipertensi">Hipertensi</a>
+                  <br>
+                  <a href="https://www.alodokter.com/serangan-jantung">Serangan Jantung</a>
+                  <br>
+                  <a href="https://www.siloamhospitals.com/informasi-siloam/artikel/apa-itu-osteoarthritis "><span>Osteoarthritis</span></a>
+                <br>
+                <br>
+                <br>
+                <button class="registrasi" type="submit">Registrasi Sekarang</button>
+                <br>
+                <img src="asset/ideal.png" alt="" width="40%" height="40%">
+            </section>
+      </div>
+    </main>
+  <footer>
+    <div class="footer1">
+      <h3  class="footer1-h3">Download Aplikasi</h3>
+      <img class="img-appstore" src="asset/appstore.jpg" alt="" width="21%" height="20%">
+      <img class="img-googleplay" src="asset/googleplay.jpg" alt="" width="25%" height="20%">
+    </div>
+    <div class="footer2">
+      <h3 class="footer-h3">Follow Us</h3>
+      <br>
+      <i data-feather="instagram"></i>
+      <i data-feather="facebook"></i>
+      <i data-feather="twitter"></i>
+    </div>
+  </footer>
+  <script>
+    feather.replace();
+  </script>
+  <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+
+header {
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+}
+
+/* DISPLAY FORM */
+.container-form {
+  background-color: lightgrey;
+}
+
+.container-item {
+  border-bottom: 2px solid;
+  width: 100%;
+  padding: 24px;
+}
+
+.container-item h2 {
+  text-align: center;
+}
+
+.container-form {
+  text-align: left;
+  background-color: aliceblue;
+  padding: 24px;
+}
+
+.container-form-div {
+  padding: 8px;
+}
+.form-item {
+  height: 20px;
+  border: none;
+  border-radius: 15px;
+  width: 100px;
+}
+
+/* button {
+  border: 0px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: lightblue;
+} */
+
+.calculate-button {
+  height: 35px;
+  border-radius: 8px;
+  background-color: aqua;
+  color: black;
+}
+.btn-reset {
+  height: 35px;
+  border-radius: 8px;
+  background-color: orange;
+  color: black;
+}
+
+span {
+  font-style: italic;
+}
+
+
+
+/* DISPLAY RESULT */
+.container-result {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+
+.container-result-penyakit {
+  justify-content: center;
+  text-align: center;
+}
+
+.download-result {
+  height: 35px;
+  border-radius: 8px;
+  background-color:lightgray;
+  color: black;
+}
+
+.konsultasi-button {
+  text-align: center;
+  background-color: lightgreen;
+}
+
+.registrasi {
+  height: 35px;
+  border-radius: 8px;
+  background-color:lightgray;
+  color: black;
+}
+
+
+/* FOOTER */
+.footer1{
+  text-align: center;
+}
+
+
+.footer2 {
+  text-align: center;
+}
+
+
+/* MEDIA QUERIEs */
+/* PHONE */
+@media only screen and (max-width: 480px) {
+  .main-container {
+    flex-direction: column;
+  }
+} 
